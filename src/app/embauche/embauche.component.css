@@ -1,0 +1,14 @@
+#listeEmbauche {
+  border: 2px lavender solid;
+  border-radius: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 608px;
+}
+.push-to-the-right{
+  margin-left: 13px;
+}
+.next{
+  border-right: 2px lavender solid;
+  margin-right: 0px;
+}

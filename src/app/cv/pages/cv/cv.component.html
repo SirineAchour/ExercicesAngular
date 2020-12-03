@@ -1,0 +1,13 @@
+  <div class="row">
+    <div class="col-3">
+      <app-list
+        (forwardSelectedPersonne)="catchSelectedPersonne($event)"
+      ></app-list>
+    </div>
+    <div class="col-3">
+      <app-detail [personne]="selectedPersonne"></app-detail>
+    </div>
+  </div>
+  <div class="row">
+    <app-embauche></app-embauche>
+  </div>

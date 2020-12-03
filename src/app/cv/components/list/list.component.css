@@ -1,0 +1,8 @@
+.list-group{
+  height: 400px;
+  overflow:hidden; overflow-y:scroll;
+}
+.li{
+  padding: 0px;
+  margin: 0px;
+}

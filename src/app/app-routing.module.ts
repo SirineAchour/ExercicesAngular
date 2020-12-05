@@ -3,7 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { CvComponent } from './cv/pages/cv/cv.component';
 import { EmbaucheComponent } from './embauche/embauche.component';
 import { RainbowComponent } from './rainbow/rainbow.component';
-import { TodoListComponent } from './todo-list/todo-list.component';
+import { TestObservableComponent } from './test-observable/test-observable.component';
+import { TodoListComponent } from './todo/todo-list/todo-list.component';
 
 
 const routes: Routes = [
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: '', component: CvComponent },
   { path: 'todo', component: TodoListComponent},
   { path: 'rainbow', component: RainbowComponent},
+  { path: 'observable', component: TestObservableComponent},
 ];
 
 export const ROUTING = RouterModule.forRoot(routes);

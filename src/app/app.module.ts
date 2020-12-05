@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RainbowInputDirectiveDirective } from './rainbow/rainbow-input-directive.directive';
-import { TodoListComponent } from './todo-list/todo-list.component';
+import { TodoListComponent } from './todo/todo-list/todo-list.component';
 import { Todo } from './model/Todo';
 import { EmbaucheComponent } from './embauche/embauche.component';
 import { RainbowComponent } from './rainbow/rainbow.component';
@@ -14,6 +14,7 @@ import { ListComponent } from './cv/components/list/list.component';
 import { DetailComponent } from './cv/components/detail/detail.component';
 import { ItemComponent } from './cv/components/item/item.component';
 import { DefaultImagePipe } from './pipes/default-image.pipe';
+import { TestObservableComponent } from './test-observable/test-observable.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { DefaultImagePipe } from './pipes/default-image.pipe';
     ListComponent,
     DetailComponent,
     ItemComponent,
-    DefaultImagePipe
+    DefaultImagePipe,
+    TestObservableComponent
   ],
   imports: [
     BrowserModule,

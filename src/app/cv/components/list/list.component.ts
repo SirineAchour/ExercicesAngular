@@ -9,12 +9,22 @@ import { CvService } from '../../services/cv.service';
 })
 export class ListComponent implements OnInit {
   public personnes: Personne[] = [];
-  @Output() forwardSelectedPersonne = new EventEmitter();
+  //@Output() forwardSelectedPersonne = new EventEmitter(); NO LONGER NEED THIS 5ATR SUBJECT
+
   constructor(private cvService: CvService) {}
+
   ngOnInit(): void {
-    this.personnes = this.cvService.getPersonnes();
+    const ob = this.cvService.getPersonnesHttpObservable()
+    this.personnes = this.cvService.getPersonnes()
+    ob.subscribe(
+      (people) => {
+        console.log(people)
+        this.personnes = people
+      }
+    )
   }
+  /*
   forwardPersonne(selectedPersonne: Personne) {
     this.forwardSelectedPersonne.emit(selectedPersonne);
-  }
+  }*/
 }

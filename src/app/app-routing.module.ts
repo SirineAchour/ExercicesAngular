@@ -15,10 +15,10 @@ const routes: Routes = [
   { path: 'observable', component: TestObservableComponent},
 ];
 
-export const ROUTING = RouterModule.forRoot(routes);
+export const ROUTING = RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' });
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
   exports: [RouterModule]
 })
 export class AppRoutingModule {

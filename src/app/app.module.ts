@@ -15,6 +15,7 @@ import { DetailComponent } from './cv/components/detail/detail.component';
 import { ItemComponent } from './cv/components/item/item.component';
 import { DefaultImagePipe } from './pipes/default-image.pipe';
 import { TestObservableComponent } from './test-observable/test-observable.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { TestObservableComponent } from './test-observable/test-observable.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

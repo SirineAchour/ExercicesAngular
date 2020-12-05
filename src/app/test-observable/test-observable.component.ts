@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { map, filter } from 'rxjs/operators'
 
 @Component({
   selector: 'app-test-observable',
@@ -21,7 +22,7 @@ export class TestObservableComponent implements OnInit {
       let i = 5;
       setInterval(() => {
         if (!i) {
-          observer.error();
+          observer.error("c bon !i");
         }
         observer.next(i--);
       }, 1000);
@@ -29,7 +30,18 @@ export class TestObservableComponent implements OnInit {
 
     this.observable.subscribe((val) => {
       console.log(val);
-    });
+    },
+      (erreur) => console.log(erreur),
+      () => console.log('flux finalisé'));
+
+    this.observable.pipe(
+      map(x => x * 3),
+      filter(x =>  x % 2 === 0)
+    ).subscribe((val) => {
+      console.log("piped stuff : " + val);
+    },
+      (erreur) => console.log(erreur),
+      () => console.log('flux finalisé'));
 
     this.observable.subscribe(
       (data) =>
